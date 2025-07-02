@@ -29,6 +29,7 @@
             <th>NIM</th>
             <th>Jurusan</th>
             <th>No. HP</th>
+            <th>AKSI</th>
         </tr>
         <?php 
         $i = 1;
@@ -40,8 +41,17 @@
            <td><?= $mhs["nim"] ?></td>
            <td><?= $mhs["jurusan"] ?></td>
            <td><?= $mhs["nohp"] ?></td>
-           <td><a href="hapusdata.php/?id=<?= $mhs["id"] ?>" ><button style="margin-bottom: 12px; background-color: red; ">Hapus</button></a></td>
-        </tr>
+           <td>
+                <a href="hapusdata.php/?id=<?= $mhs["id"] ?>" onclick="return confirm('Yaquen??')"  >
+                    <button style="margin-bottom: 12px;
+                    background-color: red;">Hapus</button></a>
+                <a href="ubahdata.php/?id=<?= $mhs["id"] ?>">
+                    <button style="margin-bottom: 12px;
+                     background-color: blue;">
+                     EDIT
+                    </button>
+            </a>
+            </td>
         <?php $i++; } ?>
 
     </table>

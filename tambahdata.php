@@ -38,7 +38,7 @@
 </head>
 <body>
     <h1>Tambah Data Mahasiswa</h1>
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
     <label for="name">Nama : </label>
     <input type="text" name="nama" id="name" placeholder="Nama Lengkap*" required /><br>
 
@@ -48,8 +48,9 @@
     <input type="text" name="jurusan" id="jurusan" required /><br>
 
     <label for="nohp">No HP : </label>
-    <input type="text" name="nohp" id="nohp" /><br>
-
+    <input type="text" name="nohp" id="nohp" required/><br>
+    <label >Foto:</label>
+    <input type="file" name = "foto" required> <br>
     <button type="submit" name="submit">Tambah</button>
 </form>
 </body>
